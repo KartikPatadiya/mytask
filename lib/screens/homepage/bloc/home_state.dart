@@ -17,3 +17,5 @@ class UserInfoLoaded extends HomeState {
     required this.workExperience,
   });
 }
+
+class LogoutSuccess extends HomeState {}

@@ -16,7 +16,6 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of  application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
                     create: (context) =>
                         HomeBloc(authBloc: context.read<AuthBloc>())),
               ],
-              child: LoginScreen(),
+              child: const LoginScreen(),
             ),
         '/home': (context) => MultiBlocProvider(
               providers: [
@@ -44,9 +43,8 @@ class MyApp extends StatelessWidget {
                     create: (context) =>
                         HomeBloc(authBloc: context.read<AuthBloc>())),
               ],
-              child: HomeScreen(),
+              child: const HomeScreen(),
             ),
-        // Define other routes here
       },
     );
   }
